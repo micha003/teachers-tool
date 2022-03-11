@@ -13,7 +13,7 @@ def einzelmodus():
         for i in range(anzahl_noten):
             temp_note = int(input(f"Note {i + 1}:"))
             core.line()
-
+#checking if the grade is correct type
             if temp_note < 1 or temp_note > 6:
                 while temp_note < 1 or temp_note > 6:
                     temp_note = int(input(f"Dies ist nicht zulässig. Note {i + 1}: "))
@@ -111,4 +111,5 @@ def listmodus():
 
 
 if __name__ == "__main__":
+    einzelmodus()
     listmodus()

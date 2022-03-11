@@ -1,5 +1,4 @@
 # importing functions
-import random_name as av_calc
 import core
 import random_name as r_name
 import point_grade_calc as pg_calc

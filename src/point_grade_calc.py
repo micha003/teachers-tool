@@ -4,11 +4,11 @@ def point_grade():
     total_points = int(input("Geben Sie die maximale Anzahl der Punkte: "))
     core.line()
 
-    grade1 = float(total_points) * 0,96
-    grade2 = float(total_points) * 0,8
-    grade3 = float(total_points) * 0,6
-    grade4 = float(total_points) * 0,45
-    grade5 = float(total_points) * 0,16
+    grade1 = float(total_points) * 0.96
+    grade2 = float(total_points) * 0.8
+    grade3 = float(total_points) * 0.6
+    grade4 = float(total_points) * 0.45
+    grade5 = float(total_points) * 0.16
     grade6 = float(total_points) * 0
 
     print(f"Note 1: {grade1} \n"
@@ -47,3 +47,7 @@ def main_func():
         else:
             print("Bug!")
             exit(564)
+
+#unit test (delete it, if you don't want to have it ;) )
+if __name__ == "__main__":
+    main_func()

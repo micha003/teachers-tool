@@ -111,11 +111,8 @@ def randomizing_groups(namensliste, p_anzahl_namen):
        for a in range(group_members):
            temp_name = r.choice(namensliste)
 
-           if temp_name in groups:
-               a = a - 1
-               continue
-           else:
-               groups.append(temp_name)
+
+           groups.append(temp_name)
 
        print(f"Gruppe {i + 1}: {groups}")
        del groups[:]
@@ -141,8 +138,8 @@ def main_func(namensliste):
         else:
             while not groups_decide == 0 or not groups_decide == 1:
                 groups_decide = int(
-                    input("Geben Sie 1 ein, wenn direkt Gruppen eingeteilt werden sollen. Sonst wählen sie 0."
-                          "\n >>>"))
+                    input("Geben Sie 1 ein, wenn direkt Gruppen eingeteilt werden sollen. Sonst wählen sie 0. \n"
+                          ">>>"))
                 core.line()
 
                 if groups_decide == 0 or groups_decide == 1:

@@ -2,9 +2,8 @@
 
 _a simple tool for teachers in the terminal ;)_
 
-- a GUI will be added someday
-
-**if you have ideas for the app, tell me it in a issue ;)**
+- a GUI will be added in version **2.0**
+- versions **1.x** will be in console
 
 <hr>
 

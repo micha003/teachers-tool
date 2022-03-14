@@ -195,3 +195,5 @@ if __name__ == "__main__":
     list = []
     anzahl = 0
     main_func(list)
+
+    #dies ist ein kommentar

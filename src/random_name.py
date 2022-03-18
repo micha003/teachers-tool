@@ -107,17 +107,23 @@ def randomizing_groups(namensliste, p_anzahl_namen):
 
     groups = []
 
-    for i in range(anzahl_gruppen):
-       for a in range(group_members):
-           temp_name = r.choice(namensliste)
+    i = 1
 
+    while i < anzahl_gruppen:
+        for a in range(group_members):
+            temp_name = r.choice(namensliste)
 
-           groups.append(temp_name)
+            if temp_name in groups:
+                a = a - 1
+                continue
+            else:
+                pass
 
-       print(f"Gruppe {i + 1}: {groups}")
-       del groups[:]
+            groups.append(temp_name)
 
-    core.line()
+        print(f"Gruppe {i}: {groups}")
+        core.line()
+        i += 1
 
 def main_func(namensliste):
     again = 1
@@ -195,5 +201,3 @@ if __name__ == "__main__":
     list = []
     anzahl = 0
     main_func(list)
-
-    #dies ist ein kommentar

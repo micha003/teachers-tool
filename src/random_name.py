@@ -21,7 +21,13 @@ def get_names(namensliste):
     # get the Names
 
     for i in range(anzahl_namen):
-        temp_name = input(f"Name {i + 1}: ")
+        while True:
+            temp_name = input(f"Name {i + 1}: ").strip()
+
+            if temp_name == "":
+                print("Dies ist nicht zulässig!")
+            else:
+                break
         namensliste.append(temp_name)
 
     core.line()

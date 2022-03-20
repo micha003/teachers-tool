@@ -1,8 +1,8 @@
 # importing functions
-import random_name as av_calc
 import core
 import random_name as r_name
 import point_grade_calc as pg_calc
+import average_calculator as av_calc
 
 #Hauptschleife
 if __name__ == "__main__":

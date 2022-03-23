@@ -4,6 +4,7 @@ _a simple tool for teachers in the terminal ;)_
 
 - a GUI will be added in version **2.0**
 - versions **1.x** will be in console
+- the **main**-branch is the branch with a stable version of the app
 
 <hr>
 
@@ -26,3 +27,8 @@ is it also okay.
 with `.\auto-py-to-exe.exe`
 
 _Note: You have to add only the main-files (.py) and not more! That means only the files in the src-directory._
+
+<hr>
+
+**If you have some ideas for the app or some feedback, then write it in the discussion or write a comment
+below an issue. Thank you**

@@ -60,6 +60,7 @@ def randomizing(namensliste):
         pass
 
 def randomizing_groups(namensliste, p_anzahl_namen):
+    print(namensliste) # only test
     groups_or_mem = int(input("Anzahl Gruppen [1] oder Anzahl Gruppenmitglieder [2] ?: "))
     core.line()
 
@@ -113,23 +114,8 @@ def randomizing_groups(namensliste, p_anzahl_namen):
 
     groups = []
 
-    i = 1
+    for i in range(anzahl_gruppen):
 
-    while i < anzahl_gruppen:
-        for a in range(group_members):
-            temp_name = r.choice(namensliste)
-
-            if temp_name in groups:
-                a = a - 1
-                continue
-            else:
-                pass
-
-            groups.append(temp_name)
-
-        print(f"Gruppe {i}: {groups}")
-        core.line()
-        i += 1
 
 def main_func(namensliste):
     again = 1

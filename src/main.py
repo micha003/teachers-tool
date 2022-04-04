@@ -32,8 +32,8 @@ if __name__ == "__main__":
                 core.line()
                 continue
         elif action == 2:
-            namensliste = list()
-            r_name.main_func(namensliste)
+            liste = list()
+            r_name.main_func(liste)
             core.line()
         elif action == 3:
             pg_calc.main_func()

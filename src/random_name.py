@@ -1,4 +1,5 @@
 import random as r
+import math
 import core
 
 # get the Name-list
@@ -61,75 +62,26 @@ def randomizing(namensliste):
 
 def randomizing_groups(namensliste, p_anzahl_namen):
     print(namensliste) # only test
-    groups_or_mem = int(input("Anzahl Gruppen [1] oder Anzahl Gruppenmitglieder [2] ?: "))
+    anzahl_groups = int(input("Anzahl Gruppen (mind. 2): "))
     core.line()
 
-    if groups_or_mem == 1 or groups_or_mem == 2:
+    if anzahl_groups >= 2:
         pass
     else:
-        while not groups_or_mem == 1 or not groups_or_mem == 2:
-            groups_or_mem = int(input("Dies ist nicht gültig! Anzahl Gruppen [1] oder Anzahl Gruppenmitglieder [2] ?: "))
-            core.line()
+        while not anzahl_groups >= 2:
+            anzahl_groups = int(input("Dies ist nicht zulässig. Anzahl Gruppen (mind. 2): "))
 
-            if groups_or_mem == 1 or groups_or_mem == 2:
+            if anzahl_groups >= 2:
                 break
+            else:
+                continue
 
-    if groups_or_mem == 1:
-        anzahl_gruppen = int(input("Wie viele Gruppen sollen eingeteilt werden? (mind. 2): "))
-        core.line()
-
-        if anzahl_gruppen <= 1:
-            while not anzahl_gruppen >= 2:
-                anzahl_gruppen = int(input("Dies ist nicht zulässig. Bitte geben sie die Anzahl der Gruppen ein (mind. 2): "))
-                core.line()
-
-                if anzahl_gruppen <= 1:
-                    continue
-                else:
-                    break
-        else:
-            pass
-
-        group_members = p_anzahl_namen / anzahl_gruppen
-        group_members = round(group_members)
-
-    elif groups_or_mem == 2:
-        group_members = int(input("Wie viele Leute pro Gruppe? (mind. 2): "))
-        core.line()
-
-        if group_members <= 1:
-            while not group_members >= 2:
-                group_members = int(input("Dies ist nicht zulässig. Bitte geben sie die Anzahl der Gruppen ein (mind. 2): "))
-                core.line()
-
-                if group_members <= 1:
-                    continue
-                else:
-                    break
-        else:
-            pass
-
-        anzahl_gruppen = p_anzahl_namen / group_members
-        anzahl_gruppen = round(anzahl_gruppen)
+    anzahl_group_member = math.ceil(p_anzahl_namen / anzahl_groups)
 
     groups = []
-    rep = 0
 
-    while rep != anzahl_gruppen:
-        for i in range(group_members):
-            temp_name = r.choice(namensliste)
-            print(temp_name) # only for test
+    for i in range(anzahl_groups):
 
-            if temp_name in groups:
-                i = i - 1
-                continue
-            else:
-                pass
-            groups.append(temp_name)
-
-        print(groups)
-        del groups[:]
-        rep = rep + 1
 
 def main_func(namensliste):
     again = 1
